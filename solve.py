@@ -2,7 +2,7 @@ from os import path
 from argparse import ArgumentParser
 from clingo import Control, Model
 
-def solve(asp_dir: str, input_files: str, show_supports: bool, show_precedents: bool):
+def solve(asp_dir: str, input_files: str, show_supports: bool, show_precedent: bool):
     ctl1 = Control(["--enum-mode=cautious"])
     ctl1.load(f"{asp_dir}/step1.lp")
 
@@ -23,7 +23,7 @@ def solve(asp_dir: str, input_files: str, show_supports: bool, show_precedents: 
 
     if show_supports:
         show.append("min_supports/3")
-    if show_precedents:
+    if show_precedent:
         show.append("precedent/3")
 
     ctl2 = Control(["--project", "--show", ",".join(show), "--warn=no-atom-undefined"])
