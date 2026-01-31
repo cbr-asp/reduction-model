@@ -26,7 +26,7 @@ To install the dependencies, including the Python module for clingo, run:
 To execute the program, pass .lp input files via the command line.
 The program will then output whether constraint applies:
 
-```
+```bash
 > python solve.py example/example1.lp
 constraint(cf, defendant)
 ```
@@ -35,7 +35,7 @@ constraint(cf, defendant)
 
 Further options, such as `-s` and `-p`, can be specified to add further information to the output of the program.
 
-```
+```bash
 > python solve.py --help
 usage: solve.py [-h] [-s] [-p] inputfile [inputfile ...]
 
