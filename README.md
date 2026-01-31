@@ -39,7 +39,7 @@ Further options, such as `-s` and `-p`, can be specified to add further informat
 > python solve.py --help
 usage: solve.py [-h] [-s] [-p] inputfile [inputfile ...]
 
-An implementation of the Reduction Model for incomplete and multi-precedent cases
+An implementation of the Reduction Model for dimensions and incomplete facts
 
 positional arguments:
   inputfile             an input file in .lp format containing dimensions, cases, and a focus case
