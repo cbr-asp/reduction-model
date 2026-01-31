@@ -9,13 +9,14 @@ This repository is an addition to the paper written on the same matter.
 - `asp/` contains the two ASP computing steps.
     1. `step1.lp` contains the code for generating a single interpretation.
     2. `step2.lp` contains the code for inferring constraint from the case base and the known supporting thresholds.
-- `solve.py` calls glues together the two computing step. First, the intersection of all answer sets of `step1.lp` together with the input is computed using clingo CLI flag `--enum-mode=cautious`. The output of the intersection is then passed to `step2.lp` where  constraint is inferred.
+- `solve.py` glues together the two computing steps. First, the intersection of all answer sets of `step1.lp` together with the input is computed using the clingo CLI flag `--enum-mode=cautious` to infer the supporting thresholds. The output of the intersection is then passed to `step2.lp` where constraint is inferred.
 - `examples/` contains examples that can be passed to the program as input.
 
 ## Installation
 
-This project requires [Python 3.13](https://www.python.org/downloads/) or newer.
+This project requires [Python 3.13](https://www.python.org/downloads/) or newer to be installed.
 To install the dependencies, including the Python module for clingo, run:
+
 ```bash
 > pip install -r requirements.txt
 ```
@@ -23,7 +24,7 @@ To install the dependencies, including the Python module for clingo, run:
 ## Execution
 
 To execute the program, pass .lp input files via the command line.
-The program will then output
+The program will then output whether constraint applies:
 
 ```
 > python solve.py example/example1.lp
@@ -32,7 +33,7 @@ constraint(cf, defendant)
 
 ### CLI options
 
-Further options, such as `-s` and `-p`, can be specified to adjust the output of the program.
+Further options, such as `-s` and `-p`, can be specified to add further information to the output of the program.
 
 ```
 > python solve.py --help
