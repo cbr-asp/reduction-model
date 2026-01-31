@@ -40,7 +40,7 @@ def solve(asp_dir: str, input_files: str, show_supports: bool, show_precedents: 
 if __name__ == "__main__":
     parser = ArgumentParser(
         prog="solve.py",
-        description="An implementation of the Reduction Model for incomplete and multi-precedent cases")
+        description="An implementation of the Reduction Model for dimensions and incomplete facts")
 
     parser.add_argument("-s", "--show-supports", action="store_true", help="show the minimal supporting thresholds for dimensions")
     parser.add_argument("-p", "--show-precedent", action="store_true", help="show the precedent cases in the output")
