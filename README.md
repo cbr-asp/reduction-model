@@ -1,7 +1,6 @@
-# An Implementation of the Reduction Model for Incomplete and Multi-Precedent Cases
+# A Reduction Model for Dimensions and Incomplete Facts
 
-This repository contains an implementation of the Reduction Model for incomplete and
-multi-precedent cases. The implementation utilises answer set programming (ASP) and uses as
+This repository contains an implementation of the Reduction Model for dimensions and incomplete facts. The implementation utilises answer set programming (ASP) and uses as
 its backend the state-of-the-art solver [clingo](https://potassco.org/clingo/).
 This repository is an addition to the paper written on the same matter.
 
